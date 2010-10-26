@@ -13,6 +13,7 @@ Gem::Specification.new do |s|
     "README",
     "Rakefile",
     "lib/minified/puppet.rb",
+    "minified-puppet.gemspec",
     "puppet/bootstrap.sh",
     "puppet/classes/apache.pp",
     "puppet/classes/apache/centos.conf",
