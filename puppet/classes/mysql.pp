@@ -1,10 +1,10 @@
 class mysql {
   class client {
-    package {"mysql":
+    package {"mysql-client":
       ensure => present
     }
 
-    package {"mysql-devel":
+    package {"libmysqlclient15-dev":
       ensure => present
     }
   }
