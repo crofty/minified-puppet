@@ -1,0 +1,3 @@
+Setup a new server (Ubuntu 10.4) using Puppet and Capistrano.
+
+A lot of the code used has been taken from [http://github.com/freerange/freerange-puppet]
