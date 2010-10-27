@@ -9,5 +9,6 @@ include base
 include ruby
 include multiverse
 include monit
+include postfix
 
 import "roles/*"
