@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{minified-puppet}
-  s.version = "0.0.6"
+  s.version = "0.0.7"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["James Croft"]
@@ -57,6 +57,7 @@ Gem::Specification.new do |s|
     "puppet/classes/syslogng.pp",
     "puppet/classes/syslogng/CentOS.cnf",
     "puppet/classes/syslogng/Ubuntu.cnf",
+    "puppet/classes/telnet.pp",
     "puppet/classes/wkhtmltopdf.pp",
     "puppet/classes/xml.pp",
     "puppet/classes/yum.pp",
