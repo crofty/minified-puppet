@@ -1,5 +1,11 @@
 class wkhtmltopdf {
 
+  package{
+    "openssl":;
+    "xorg":;
+    "libssl-dev":;
+  }
+
   wkhtmltopdf_source{"wkhtmltopdf_source":;}
 
   define wkhtmltopdf_source(
