@@ -18,6 +18,10 @@ class munin {
       require => Package["munin-node"],
       ensure => running 
     }
+    package {"request-log-analyzer":
+      ensure => present,
+      provider => gem
+    }
   }
 
   define plugin($config, $content) {
@@ -40,14 +44,10 @@ class munin {
 
   define rails($log) {
 
-    package {"request-log-analyzer":
-      ensure => present,
-      provider => gem
-    }
-
     munin::plugin {"$name-rails-requests":
       config => template("munin/rails-plugin-config"),
-      content => template("munin/plugins/rails_requests")
+      content => template("munin/plugins/rails_requests"),
+      require => Package["request-log-analyzer"]
     }
 
     munin::plugin {"$name-rails-request-duration":
