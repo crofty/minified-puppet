@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{minified-puppet}
-  s.version = "0.0.11"
+  s.version = "0.0.12"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["James Croft"]
@@ -19,6 +19,11 @@ Gem::Specification.new do |s|
     "puppet/classes/apache/centos.conf",
     "puppet/classes/apache/ssl.conf",
     "puppet/classes/base.pp",
+    "puppet/classes/java/README",
+    "puppet/classes/java/manifests/classes/dev.pp",
+    "puppet/classes/java/manifests/classes/v6.pp",
+    "puppet/classes/java/manifests/init.pp",
+    "puppet/classes/java/templates/java-home.erb",
     "puppet/classes/minified.pp",
     "puppet/classes/mongo.pp",
     "puppet/classes/monit.pp",
@@ -42,6 +47,17 @@ Gem::Specification.new do |s|
     "puppet/classes/nginx/vhost.erb",
     "puppet/classes/post-flight.pp",
     "puppet/classes/postfix.pp",
+    "puppet/classes/postgis/README.rst",
+    "puppet/classes/postgis/files/usr/local/bin/make-postgresql-postgis-template.sh",
+    "puppet/classes/postgis/manifests/classes/postgis-base.pp",
+    "puppet/classes/postgis/manifests/classes/postgis-debian-base.pp",
+    "puppet/classes/postgis/manifests/classes/postgis-debian-v8-3.pp",
+    "puppet/classes/postgis/manifests/classes/postgis-debian-v8-4.pp",
+    "puppet/classes/postgis/manifests/classes/postgis-ubuntu-base.pp",
+    "puppet/classes/postgis/manifests/classes/postgis-ubuntu-v8-4.pp",
+    "puppet/classes/postgis/manifests/definitions/postgis-database.pp",
+    "puppet/classes/postgis/manifests/init.pp",
+    "puppet/classes/postgresql.pp",
     "puppet/classes/rack.pp",
     "puppet/classes/rack/passenger.load.erb",
     "puppet/classes/redis/README",
@@ -68,14 +84,14 @@ Gem::Specification.new do |s|
     "puppet/site.pp"
   ]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.7}
+  s.rubygems_version = %q{1.3.6}
   s.summary = %q{Apply puppet configuration to minified hosts}
 
   if s.respond_to? :specification_version then
     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
 
-    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
+    if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<capistrano>, [">= 0"])
       s.add_runtime_dependency(%q<capistrano-ext>, [">= 0"])
     else
