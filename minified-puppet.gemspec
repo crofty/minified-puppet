@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{minified-puppet}
-  s.version = "0.0.10"
+  s.version = "0.0.11"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["James Croft"]
@@ -34,6 +34,7 @@ Gem::Specification.new do |s|
     "puppet/classes/munin/plugins/rails_view_render_time",
     "puppet/classes/munin/plugins/redis",
     "puppet/classes/munin/rails-plugin-config",
+    "puppet/classes/munin/redis-plugin-config",
     "puppet/classes/mysql.pp",
     "puppet/classes/mysql/password.erb",
     "puppet/classes/nginx.pp",
