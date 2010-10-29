@@ -68,12 +68,15 @@ class munin {
 
   define redis() {
     munin::plugin{"redis_connected_clients":
+      config => template("munin/redis-plugin-config"),
       content => template("munin/plugins/redis")
     }
     munin::plugin{"redis_per_sec":
+      config => template("munin/redis-plugin-config"),
       content => template("munin/plugins/redis")
     }
     munin::plugin{"redis_used_memory":
+      config => template("munin/redis-plugin-config"),
       content => template("munin/plugins/redis")
     }
   }
