@@ -66,6 +66,19 @@ class munin {
     }
   }
 
+  define redis() {
+    munin::plugin{"redis_connected_clients":
+      content => template("munin/plugins/redis")
+    }
+    munin::plugin{"redis_connected_clients":
+      content => template("munin/plugins/redis")
+    }
+    munin::plugin{"redis_connected_clients":
+      content => template("munin/plugins/redis")
+    }
+  }
+
+
 
 
 }
