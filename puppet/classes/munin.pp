@@ -70,10 +70,10 @@ class munin {
     munin::plugin{"redis_connected_clients":
       content => template("munin/plugins/redis")
     }
-    munin::plugin{"redis_connected_clients":
+    munin::plugin{"redis_per_sec":
       content => template("munin/plugins/redis")
     }
-    munin::plugin{"redis_connected_clients":
+    munin::plugin{"redis_used_memory":
       content => template("munin/plugins/redis")
     }
   }
