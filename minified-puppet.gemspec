@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{minified-puppet}
-  s.version = "0.0.8"
+  s.version = "0.0.9"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["James Croft"]
-  s.date = %q{2010-10-28}
+  s.date = %q{2010-10-29}
   s.email = %q{james.r.croft@gmail.com}
   s.files = [
     ".gitignore",
@@ -32,6 +32,7 @@ Gem::Specification.new do |s|
     "puppet/classes/munin/plugins/rails_request_error",
     "puppet/classes/munin/plugins/rails_requests",
     "puppet/classes/munin/plugins/rails_view_render_time",
+    "puppet/classes/munin/plugins/redis",
     "puppet/classes/munin/rails-plugin-config",
     "puppet/classes/mysql.pp",
     "puppet/classes/mysql/password.erb",
