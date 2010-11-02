@@ -3,6 +3,10 @@ class postgresql {
     package{"postgresql":
       ensure => present
     }
+    user { "postgres":
+      ensure => present,
+      require => Package["postgresql"],
+    }
   }
 
   class server {
