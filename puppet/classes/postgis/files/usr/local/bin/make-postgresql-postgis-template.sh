@@ -11,8 +11,8 @@ PG_POSTGIS="/usr/share/postgresql-8.3-postgis/lwpostgis.sql"
 PG_SPATIAL_REF="/usr/share/postgresql-8.3-postgis/spatial_ref_sys.sql"
 ;;
 '8.4')
-PG_POSTGIS="/usr/share/postgresql/8.4/contrib/postgis-1.5/postgis.sql"
-PG_SPATIAL_REF="/usr/share/postgresql/8.4/contrib/postgis-1.5/spatial_ref_sys.sql"
+PG_POSTGIS="/usr/share/postgresql/8.4/contrib/postgis.sql"
+PG_SPATIAL_REF="/usr/share/postgresql/8.4/contrib/spatial_ref_sys.sql"
 ;;
 esac
 
