@@ -35,7 +35,7 @@ Capistrano::Configuration.instance(:must_exist).load do
 
     task :bootstrap do
       with_puppet_user do
-        sudo 'wget -q -O - http://github.com/crofty/minified-puppet/raw/master/puppet/bootstrap.sh | sh'
+        sudo 'wget --no-check-certificate -q -O - https://github.com/crofty/minified-puppet/raw/master/puppet/bootstrap.sh | sh'
       end
     end
 
