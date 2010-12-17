@@ -26,7 +26,7 @@ class nodejs {
       require => Exec["nodejs_code"]
     }
     exec { "make ${version}":
-      command => "cd ${path}/nodejs_${version} && ./configure && make && make install",
+      command => "/bin/sh -c 'cd ${path}/nodejs_${version} && ./configure && make && make install'",
       creates => "${bin}/node",
     }
   }
