@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{minified-puppet}
-  s.version = "0.0.17"
+  s.version = "0.0.18"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["James Croft"]
@@ -45,6 +45,7 @@ Gem::Specification.new do |s|
     "puppet/classes/nginx.pp",
     "puppet/classes/nginx/nginx.conf.erb",
     "puppet/classes/nginx/vhost.erb",
+    "puppet/classes/nodejs.pp",
     "puppet/classes/post-flight.pp",
     "puppet/classes/postfix.pp",
     "puppet/classes/postgis/README.rst",
