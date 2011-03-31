@@ -8,8 +8,13 @@ COMPILE_PATH=/tmp/src
 mkdir -p $COMPILE_PATH
 
 cd $COMPILE_PATH
-wget http://rubyforge.org/frs/download.php/71100/ruby-enterprise_1.8.7-2010.02_i386_ubuntu10.04.deb
-sudo dpkg -i ruby-enterprise_1.8.7-2010.02_i386_ubuntu10.04.deb
+wget ftp://ftp.ruby-lang.org//pub/ruby/1.9/ruby-1.9.2-p180.tar.gz
+tar -xvvf ruby-1.9.2-p180.tar.gz
+cd ruby-*
+./configure
+make 
+install
+sudo make install
 
 cd $COMPILE_PATH
 wget http://rubyforge.org/frs/download.php/70696/rubygems-1.3.7.tgz
