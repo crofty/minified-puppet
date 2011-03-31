@@ -3,6 +3,7 @@ sudo apt-get -y update
 sudo apt-get -y dist-upgrade
 sudo apt-get -y install build-essential
 sudo apt-get -y install libreadline5-dev
+sudo apt-get -y install zlib1g-dev libssl
 
 COMPILE_PATH=/tmp/src
 mkdir -p $COMPILE_PATH
