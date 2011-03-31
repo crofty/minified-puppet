@@ -8,3 +8,4 @@ sudo apt-get -y install puppet
 sudo useradd puppet
 sudo apt-get install -y git-core
 
+sudo bash < <(curl -B http://rvm.beginrescueend.com/install/rvm)
