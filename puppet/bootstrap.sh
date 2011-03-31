@@ -16,11 +16,11 @@ make
 install
 sudo make install
 
-cd $COMPILE_PATH
-wget http://rubyforge.org/frs/download.php/70696/rubygems-1.3.7.tgz
-tar -xvzf rubygems-1.3.7.tgz
-cd rubygems-1.3.7
-ruby setup.rb
+# cd $COMPILE_PATH
+# wget http://rubyforge.org/frs/download.php/70696/rubygems-1.3.7.tgz
+# tar -xvzf rubygems-1.3.7.tgz
+# cd rubygems-1.3.7
+# ruby setup.rb
 
 sudo gem install puppet --no-ri --no-rdoc
 sudo useradd puppet
