@@ -16,6 +16,10 @@ cd ruby-*
 make 
 install
 sudo make install
+cd /ext/zlib
+sudo ruby extconf.rb
+make
+sudo make install
 
 cd $COMPILE_PATH
 wget http://production.cf.rubygems.org/rubygems/rubygems-1.6.2.tgz
