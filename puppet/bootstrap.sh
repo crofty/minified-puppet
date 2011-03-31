@@ -20,7 +20,7 @@ cd $COMPILE_PATH
 wget http://production.cf.rubygems.org/rubygems/rubygems-1.6.2.tgz
 tar -xvzf rubygems-1.6.2.tgz
 cd rubygems-1.6.2
-ruby setup.rb
+sudo ruby setup.rb
 
 sudo gem install puppet --no-ri --no-rdoc
 sudo useradd puppet
