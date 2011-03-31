@@ -9,7 +9,7 @@ include base
 include ruby
 include multiverse
 include monit
-include postfix
+#include postfix
 include telnet
 
 import "roles/*"
