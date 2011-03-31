@@ -16,7 +16,7 @@ cd ruby-*
 make 
 install
 sudo make install
-cd /ext/zlib
+cd ext/zlib
 sudo ruby extconf.rb
 make
 sudo make install
