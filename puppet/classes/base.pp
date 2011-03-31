@@ -5,6 +5,13 @@ class base {
   include base::time
   include base::application
 
+  package {
+    "libreadline5-dev":;
+    "git-core":;
+    "build-essential":;
+
+  }
+
   class time {
     file { "/etc/localtime":
       source => "/usr/share/zoneinfo/Europe/London"

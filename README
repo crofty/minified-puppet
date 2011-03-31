@@ -1,3 +1,16 @@
 Setup a new server (Ubuntu 10.4) using Puppet and Capistrano.
 
 A lot of the code used has been taken from [http://github.com/freerange/freerange-puppet]
+
+You will need puppet installed first.  To get a recent version of puppet, add the following line to /etc/apt/sources.list
+  
+    deb http://backports.debian.org/debian-backports lenny-backports main contrib non-free
+
+Then run
+    
+    sudo aptitude update
+    sudo apt-get -y --force-yes install puppet
+
+You can then remove the backports line from /etc/apt/sources.list and run the following again
+
+    sudo aptitude update
