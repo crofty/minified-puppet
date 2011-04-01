@@ -12,18 +12,33 @@ class ruby {
       cwd => "/tmp/src",
       creates => "/tmp/src/ruby-${version}",
       require => File["src_folder"],
-      before => Exec["make ${version}"]
+      before => Exec["make ${version}"],
+      unless => "which ruby"
     }
     exec { "make ${version}":
       command => "/bin/sh -c 'cd /tmp/src/ruby-${version} && ./configure && make'",
       timeout => 0,
       creates => "/tmp/src/ruby-${version}/Makefile",
-      before => Exec["make install ${version}"]
+      before => Exec["make install ${version}"],
+      unless => "which ruby"
     }
     exec { "make install ${version}":
       command => "make install",
       cwd => "/tmp/src/ruby-${version}",
-      require => Exec["make ${version}"]
+      require => Exec["make ${version}"],
+      unless => "which ruby"
+    }
+
+    package { "bundler":
+      provider => "gem",
+      ensure => "1.0.0",
+      require => [ File["/root/.gemrc"], Exec["make install ${version}"] ]
+    }
+
+    package { "rake":
+      provider => "gem",
+      require => Exec["make install ${version}"],
+      ensure => "0.8.7"
     }
   }
   ruby_source{"ruby_source":
@@ -39,17 +54,6 @@ class ruby {
     require => Exec["ruby_code"],
     owner => root,
     group => root
-  }
-  package { "bundler":
-    provider => "gem",
-    ensure => "1.0.0",
-    require => [ File["/root/.gemrc"], Exec["ruby_code"] ]
-  }
-
-  package { "rake":
-    provider => "gem",
-    require => Exec["ruby_code"],
-    ensure => "0.8.7"
   }
   
 }
