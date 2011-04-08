@@ -1,7 +1,7 @@
 class nodejs {
 
   define nodejs_source(
-    $version = 'v0.2.5',
+    $version = 'v0.4.3',
     $path = '/usr/local/src',
     $bin = '/usr/local/bin'
   ) {
