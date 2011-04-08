@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{minified-puppet}
-  s.version = "0.0.19"
+  s.version = "0.0.20"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["James Croft"]
-  s.date = %q{2011-04-01}
+  s.date = %q{2011-04-08}
   s.email = %q{james.r.croft@gmail.com}
   s.files = [
     ".gitignore",
@@ -86,11 +86,10 @@ Gem::Specification.new do |s|
     "puppet/site.pp"
   ]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.7}
+  s.rubygems_version = %q{1.6.2}
   s.summary = %q{Apply puppet configuration to minified hosts}
 
   if s.respond_to? :specification_version then
-    current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
