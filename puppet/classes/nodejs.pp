@@ -28,6 +28,7 @@ class nodejs {
     exec { "make ${version}":
       command => "/bin/sh -c 'cd ${path}/nodejs_${version} && ./configure && make && make install'",
       creates => "${bin}/node",
+      timeout => 0
     }
   }
   

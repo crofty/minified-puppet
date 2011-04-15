@@ -29,6 +29,13 @@ class ruby {
       unless => "which ruby"
     }
 
+    exec { "ruby open sll support":
+      command => "ruby extconf.rb && make && make install",
+      require => Exec["make install ${version}"],
+      cwd => "/tmp/src/ruby-${version}/ext/openssl",
+      unless => "which ruby"
+    }
+
     package { "bundler":
       provider => "gem",
       ensure => "1.0.0",
