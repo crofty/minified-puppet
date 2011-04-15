@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{minified-puppet}
-  s.version = "0.0.20"
+  s.version = "0.0.21"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["James Croft"]
-  s.date = %q{2011-04-08}
+  s.date = %q{2011-04-15}
   s.email = %q{james.r.croft@gmail.com}
   s.files = [
     ".gitignore",
@@ -18,6 +18,7 @@ Gem::Specification.new do |s|
     "puppet/classes/apache.pp",
     "puppet/classes/apache/centos.conf",
     "puppet/classes/apache/ssl.conf",
+    "puppet/classes/apt.pp",
     "puppet/classes/base.pp",
     "puppet/classes/java/README",
     "puppet/classes/java/manifests/classes/dev.pp",
