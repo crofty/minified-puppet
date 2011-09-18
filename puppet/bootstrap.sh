@@ -1,7 +1,10 @@
-# NOTE: before running this, be sure to add the following line to /etc/apt/sources.list
-# deb http://backports.debian.org/debian-backports lenny-backports main contrib non-free
-# You might want to remove this after puppet has been installed
-
 sudo apt-get -y update
 sudo apt-get -y dist-upgrade
+
+# Add repo to get decent version of puppet installed, then remove repo
+echo 'deb http://backports.debian.org/debian-backports lenny-backports main contrib non-free' | sudo tee --append /etc/apt/sources.list
+sudo aptitude update
+sudo apt-get -y --force-yes install puppet
+sed -n '$!p' /etc/apt/sources.list | sudo tee /etc/apt/sources.list
+sudo aptitude update
 
