@@ -35,7 +35,8 @@ Capistrano::Configuration.instance(:must_exist).load do
 
     task :bootstrap do
       with_puppet_user do
-        sudo 'wget --no-check-certificate -q -O - https://github.com/crofty/minified-puppet/raw/master/puppet/bootstrap.sh | sh'
+        upload File.expand_path("../../../puppet/bootstrap.sh",__FILE__), '/tmp/bootstrap.sh'
+        sudo 'cat /tmp/bootstrap.sh | sh'
       end
     end
 
