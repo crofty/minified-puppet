@@ -4,5 +4,5 @@ description "redis"
 start on runlevel [23]
 
 script
-  exec su redis -c '<%= bin%>/redis-server /etc/redis.conf'
+exec su redis -c '<%= bin%>/redis-server /etc/redis.conf' 2>&1 >> /var/log/redis.log
 end script
