@@ -1,13 +1,13 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{minified-puppet}
-  s.version = "0.0.21"
+  s.name = "minified-puppet"
+  s.version = "0.0.22"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["James Croft"]
-  s.date = %q{2011-04-15}
-  s.email = %q{james.r.croft@gmail.com}
+  s.date = "2011-12-09"
+  s.email = "james.r.croft@gmail.com"
   s.files = [
     ".gitignore",
     "README",
@@ -63,11 +63,6 @@ Gem::Specification.new do |s|
     "puppet/classes/postgresql.pp",
     "puppet/classes/rack.pp",
     "puppet/classes/rack/passenger.load.erb",
-    "puppet/classes/redis/README",
-    "puppet/classes/redis/manifests/defines/redis_source.pp",
-    "puppet/classes/redis/manifests/init.pp",
-    "puppet/classes/redis/templates/redis-server.erb",
-    "puppet/classes/redis/templates/redis.conf.erb",
     "puppet/classes/rsyslog.pp",
     "puppet/classes/rsyslog/rails.conf.erb",
     "puppet/classes/rsyslog/rsyslog.conf",
@@ -87,8 +82,8 @@ Gem::Specification.new do |s|
     "puppet/site.pp"
   ]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.6.2}
-  s.summary = %q{Apply puppet configuration to minified hosts}
+  s.rubygems_version = "1.8.10"
+  s.summary = "Apply puppet configuration to minified hosts"
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
