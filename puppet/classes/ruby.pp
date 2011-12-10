@@ -1,17 +1,20 @@
 class ruby {
 
   define ruby_source(
-    $version = '1.9.2-p180'
+    $version = '1.9.3-p0'
   ){
     file { src_folder:
        path => "/tmp/src",
        ensure => "directory"
     }
+
+    package { "libyaml-dev":; }
+
     exec { ruby_code:
       command => "wget ftp://ftp.ruby-lang.org//pub/ruby/1.9/ruby-${version}.tar.gz && tar -xvf ruby-${version}.tar.gz",
       cwd => "/tmp/src",
       creates => "/tmp/src/ruby-${version}",
-      require => File["src_folder"],
+      require => [File["src_folder"], Package["libyaml-dev"]],
       before => Exec["make ${version}"],
       unless => "which ruby"
     }
@@ -38,14 +41,14 @@ class ruby {
 
     package { "bundler":
       provider => "gem",
-      ensure => "1.0.0",
-      require => [ File["/root/.gemrc"], Exec["make install ${version}"] ]
+      ensure => "1.0.21",
+      require => [ File["/root/.gemrc"], Exec["make install ${version}"]]
     }
 
     package { "rake":
       provider => "gem",
       require => Exec["make install ${version}"],
-      ensure => "0.8.7"
+      ensure => "0.9.2.2"
     }
   }
   ruby_source{"ruby_source":

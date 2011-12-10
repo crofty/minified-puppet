@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = "minified-puppet"
-  s.version = "0.0.22"
+  s.version = "0.0.23"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["James Croft"]
-  s.date = "2011-12-09"
+  s.date = "2011-12-10"
   s.email = "james.r.croft@gmail.com"
   s.files = [
     ".gitignore",
